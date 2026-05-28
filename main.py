@@ -16,6 +16,7 @@ def main():
              }
             )
     print("Depois:", df['Date'].dtype)
+    print("Depois:", df['Amount'].dtype)
     print(df['Date'].head())
     print("\n✅ Análise concluída! Resultados em /outputs/graficos")
     guardar_csv(df, "data/processed/Chocolate_Sales_final.csv") 

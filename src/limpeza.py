@@ -13,7 +13,7 @@ def converter_tipos(df: pd.DataFrame, conversoes: dict = None) -> pd.DataFrame:
     if conversoes:
         for col, tipo in conversoes.items():
             if tipo == 'data':
-                df[col] = pd.to_datetime(df[col],errors='coerce')
+                df[col] = pd.to_datetime(df[col],dayfirst=True)
             elif tipo == 'moeda':
                 df[col] = (
                     df[col]
