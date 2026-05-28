@@ -6,7 +6,8 @@ def carregar_csv(caminho: str) -> pd.DataFrame:
     print(f"✅ Dados carregados: {df.shape[0]} linhas, {df.shape[1]} colunas")
     return df
 def guardar_csv(df: pd.DataFrame, caminho: str) -> None:
-    """Guarda o DataFrame num ficheiro CSV."""
-    df.to_csv(caminho, index=False)
+    """Guarda o DataFrame num ficheiro CSV/Excel.
+    df.to_csv(caminho, index=False)"""
+    df.to_excel(caminho, index=False,engine='openpyxl')
     print(f"✅ Ficheiro guardado: {caminho}")
     
